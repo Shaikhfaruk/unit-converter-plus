@@ -15,7 +15,10 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50">
       <Header />
-
+      <meta
+        name="google-site-verification"
+        content="3ee1SL9ktKFw2VA5Drump0azDsNE77HgQtX1oXGHIpA"
+      />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <AdPlacement position="top" />
