@@ -2,6 +2,17 @@
 
 import { useEffect } from "react";
 
+// Define proper types for AdSense
+interface AdsenseInstance {
+  push: (params: object) => void;
+}
+
+declare global {
+  interface Window {
+    adsbygoogle: AdsenseInstance[];
+  }
+}
+
 interface AdPlacementProps {
   position: "top" | "middle" | "bottom";
 }
@@ -9,10 +20,19 @@ interface AdPlacementProps {
 export default function AdPlacement({ position }: AdPlacementProps) {
   useEffect(() => {
     try {
-      // Try to run ads
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
+      // Initialize adsbygoogle if it doesn't exist
+      if (!window.adsbygoogle) {
+        window.adsbygoogle = [];
+      }
+      window.adsbygoogle.push({
+        push: function (params: object): void {
+          throw new Error("Function not implemented.");
+        },
+      });
     } catch (err) {
-      console.log("AdSense error:", err);
+      if (err instanceof Error) {
+        console.log("AdSense error:", err.message);
+      }
     }
   }, []);
 
