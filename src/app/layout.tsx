@@ -11,6 +11,9 @@ export const metadata = {
     "Convert between different units of measurement including length, weight, temperature, and volume. Free, fast, and easy to use.",
   keywords:
     "unit converter, measurement converter, length converter, weight converter, temperature converter, volume converter",
+  verification: {
+    google: "3ee1SL9ktKFw2VA5Drump0azDsNE77HgQtX1oXGHIpA",
+  },
 };
 
 export default function RootLayout({
@@ -26,6 +29,10 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7596578471761023"
           strategy="lazyOnload"
           crossOrigin="anonymous"
+        />
+        <meta
+          name="google-site-verification"
+          content="3ee1SL9ktKFw2VA5Drump0azDsNE77HgQtX1oXGHIpA"
         />
       </head>
       <body className={inter.className}>
