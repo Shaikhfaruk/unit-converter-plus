@@ -1,4 +1,4 @@
-import AdPlacement from "@/components/AdPlacement";
+// import AdPlacement from "@/components/AdPlacement";
 import ConverterCard from "@/components/ConverterCard";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -21,7 +21,7 @@ export default function Home() {
       />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <AdPlacement position="top" />
+          {/* <AdPlacement position="top" /> */}
 
           <ConverterCard
             title="Length Converter"
@@ -35,7 +35,7 @@ export default function Home() {
             description="Convert between kilograms, pounds, ounces, and more"
           />
 
-          <AdPlacement position="middle" />
+          {/* <AdPlacement position="middle" /> */}
 
           <ConverterCard
             title="Temperature Converter"
@@ -49,7 +49,7 @@ export default function Home() {
             description="Convert between liters, gallons, cups, and more"
           />
 
-          <AdPlacement position="bottom" />
+          {/* <AdPlacement position="bottom" /> */}
         </div>
       </div>
 
